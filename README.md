@@ -1,1 +1,1 @@
-# lightgaussian.github.io
+# DuplexGS.github.io
