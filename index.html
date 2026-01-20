@@ -30,6 +30,8 @@
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">
+  <link rel="stylesheet" href="./static/css/dics.original.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
@@ -37,6 +39,9 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/dics.original.js"></script>
+  <script src="./static/js/event_handler.js"></script>
+  <script src="./static/js/video-comparison.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/script.js"></script>
 
@@ -344,8 +349,6 @@
 
 
 
-
-
   <section class="section">
     <div class="container ">
       <div class=" has-text-centered">
@@ -478,6 +481,98 @@
       </div>
     </div>
   </section>
+
+  <section class="section">
+  <div class="hero-body" style="margin-top: -60px;">
+    <div class="container is-max-desktop" style="text-align:left">
+      <h3 class="title is-4">Comparison with SOTA method</h3>
+      <p style="font-size:18px; font-weight: 300;">
+        Compared to existing baselines, <em>Octree-GS</em> successfully captures very fine details present in the scene, particularly for objects with thin structures such as trees, light-bulbs, decorative texts, etc.
+      </p>
+      <br>
+      <div class="content has-text-centered" style="width: 80%; margin: auto;">
+        <img src="./static/images/main.png">
+      </div>
+    </div>
+    <div class="container is-max-desktop" style="text-align:left; margin-top: 30px;">
+      <h3 class="title is-4">Performance at different resolutions</h3>
+      <p style="font-size:18px; font-weight: 300;">
+        Thanks to our LOD-structured 3D Gaussians design, <em>Octree-GS</em> can adaptively handle the changed footprint size and effectively address the aliasing issues inherent to 3D-GS and Scaffold-GS.
+      </p>
+      <br>
+      <div class="content has-text-centered" style="width: 80%; margin: auto;">
+        <img src="./static/images/multiresolution.png">
+      </div>
+    </div>
+    <div class="container is-max-desktop" style="text-align:left; margin-top: 30px;">
+      <h3 class="title is-4">Effectiveness of Progressive Training</h3>
+      <p style="font-size:18px; font-weight: 300;">
+        Visualization of anchor Gaussians in different LODs (several levels are omitted for visual brevity), displaying both anchor points and splatted 2D Gaussians in each image.
+        Progressive training can guide the coarse-to-fine reconstruction process, avoid overlapping between different LOD levels. This strategy can not only reduce the number of rendered neural Gaussians, but improve the rendering accuracy of coarser LOD levels (e.g. LOD0, LOD1).
+      </p>
+      <br>
+      <div class="content has-text-centered" style="width: 80%; margin: auto; margin-bottom: 30px;">
+        <img src="./static/images/select.png">
+      </div>
+      <div class="content has-text-centered">
+        <video class="video" width="100%" id="ablation1" loop="" playsinline="" autoplay="" muted="" src="./static/images/ablation1.mp4" onplay="resizeAndPlay(this)"></video>
+        <canvas class="videoMerge" id="ablation1Merge"></canvas>
+      </div>
+    </div>
+    <div class="container is-max-desktop" style="text-align:left; margin-top: 30px;">
+      <h3 class="title is-4">Effectiveness of LOD Bias</h3>
+      <p style="font-size:18px; font-weight: 300;">
+        LOD bias is set as a learnable parameters for each anchor Gaussian as a residual to LOD levels. it effectively supplement the high-frequency regions with more consistent details to be rendered during inference process, such as those sharp edges of an object.
+      </p>
+      <br>
+      <div class="content has-text-centered">
+        <video class="video" width="100%" id="ablation2" loop="" playsinline="" autoplay="" muted="" src="./static/images/ablation2.mp4" onplay="resizeAndPlay(this)"></video>
+        <canvas class="videoMerge" id="ablation2Merge"></canvas>
+      </div>
+    </div>
+    <div class="container  is-max-desktop" style="text-align:left; margin-top: 30px;">
+      <h3 class="title is-4">Visualization at different LODs</h3>
+      <p style="font-size:18px; font-weight: 300;">
+        A clear division of roles is evident between different levels: LOD 0 captures most rough scene contents, and higher LODs gradually pick up the previously missed high-frequency details.
+        The following is a hierarchical visualization of the rendering results on various types of scenes.
+      </p>
+      <div class="content has-text-centered">
+        <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
+            <li class="nav-item">
+              <a class="nav-link active" onclick="objectSceneEvent(0)">Bicycle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(1)">Counter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(2)">Garden</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(3)">Stump</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(4)">Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(5)">Truck</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(6)">DrJohnson</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="objectSceneEvent(7)">Playroom</a>
+            </li>
+        </ul>
+        <div class="b-dics" style="font-weight: 600;">
+            <img src="./static/images/levels/bicycle_LOD0.png" alt="LOD0">
+            <img src="./static/images/levels/bicycle_LOD1.png" alt="LOD1">
+            <img src="./static/images/levels/bicycle_LOD2.png" alt="LOD2">
+            <img src="./static/images/levels/bicycle_LOD3.png" alt="LOD3">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <script>
     new BeforeAfter({
