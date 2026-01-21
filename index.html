@@ -191,67 +191,6 @@
 </section> -->
 
 
-<!--  <section class="hero is-light is-small">-->
-<!--    <div class="hero-body">-->
-<!--      <div class="container">-->
-<!--        <div id="results-carousel" class=" carousel results-carousel">-->
-<!--          <div class="item item-room">-->
-<!--            <video poster="" id="room" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/room_video_comp3.mp4"-->
-<!--                      type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--  -->
-<!--          <div class="item item-garden">-->
-<!--            <video poster="" id="garden" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/garden_video_comp3.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--          <div class="item item-bicycle">-->
-<!--            <video poster="" id="bicycle" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/bicycle_video_comp3.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--          <div class="item item-bonsai">-->
-<!--            <video poster="" id="bonsai" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/bonsai_video_comp3.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--          <div class="item item-counter">-->
-<!--            <video poster="" id="counter" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/counter_video_comp3.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--          <div class="item item-kitchen">-->
-<!--            <video poster="" id="kitchen" autoplay controls muted loop playsinline height="100%">-->
-<!--              <source src="./static/videos/kitchen_video_comp3.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--          </div>-->
-<!--        <div class="item item-train">-->
-<!--          <video poster="" id="train" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/train_video_comp3.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-struck">-->
-<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/truck_video_comp3.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-stump">-->
-<!--          <video poster="" id="stump" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/stump_video_comp3.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        </div>-->
-<!--        <p>The caption displays both the file size and the Structural Similarity Index (SSIM)</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-
-
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -294,7 +233,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <div class="publication-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/470hul75bSM?si=7F9NL8zWbU9GtqHb"
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=W6SujJZk0yE"
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
            encrypted-media; " allowfullscreen></iframe>
            
@@ -314,13 +253,10 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Method Overview</h2>
           <div class="content has-text-justified">
-            <img src="./static/images/LG.png">
+            <img src="./static/images/pipeline.png">
 
-              <p><strong>The overall pipeline of LightGaussian.</strong> 3D Gaussians are optimized from multi-view images and SfM points. LightGaussian first calculates the global significance for each Gaussian on training data, where Gaussians with the least significance are pruned. A subsequent distillation with synthesized pseudo-views is introduced to transfer the SH into a compact format. Vector quantization, consisting of codebook initialization and assignment, is further introduced for reducing the model bandwidth.</p>
-
-
-
-
+              <p><strong>Illustration of the proposed Duplex-GS pipeline..</strong> (Layer I) Ellipsoidal cells act as proxies to spatially organize local Gaussians. This structure enables efficient cell-level rasterization, significantly reducing the overhead of view-adaptive global sorting.
+              (Layer II) Intersected cells are decoded into Gaussians and blended with the proposed physically grounded WSR. The final color is computed by first determining weights via sorting in cell-level, then aggregating the Gaussians inside each cell in an order-independent WSR manner.</p>
 
           </div>
         </div>
@@ -332,7 +268,7 @@
 
 
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
@@ -345,7 +281,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -515,7 +451,7 @@
         <img src="./static/images/select.png">
       </div>
       <div class="content has-text-centered">
-        <video class="video" width="100%" id="ablation1" loop="" playsinline="" autoplay="" muted="" src="./static/images/ablation1.mp4" onplay="resizeAndPlay(this)"></video>
+        <video class="video" width="100%" id="ablation1" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/3dgs.mp4" onplay="resizeAndPlay(this)"></video>
         <canvas class="videoMerge" id="ablation1Merge"></canvas>
       </div>
     </div>
