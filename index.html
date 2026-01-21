@@ -385,9 +385,29 @@
       <div class="content has-text-centered" style="width: 80%; margin: auto; margin-bottom: 30px;">
         <img src="./static/images/select.png">
       </div>
-      <div class="content has-text-centered">
-        <video class="video" width="100%" id="ablation1" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/ours_vs_3dgs.mp4" onplay="resizeAndPlay(this)"></video>
-        <canvas class="videoMerge" id="ablation1Merge"></canvas>
+      <div class="columns is-centered">
+        <!-- Left column - 2 videos -->
+        <div class="column">
+          <div class="content has-text-centered">
+            <video class="video" width="100%" id="ablation1" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/ours_vs_3dgs.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas class="videoMerge" id="ablation1Merge"></canvas>
+          </div>
+          <div class="content has-text-centered" style="margin-top: 20px;">
+            <video class="video" width="100%" id="ablation1b" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/ours_vs_3dgs.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas class="videoMerge" id="ablation1bMerge"></canvas>
+          </div>
+        </div>
+        <!-- Right column - 2 videos -->
+        <div class="column">
+          <div class="content has-text-centered">
+            <video class="video" width="100%" id="ablation1c" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/ours_vs_3dgs.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas class="videoMerge" id="ablation1cMerge"></canvas>
+          </div>
+          <div class="content has-text-centered" style="margin-top: 20px;">
+            <video class="video" width="100%" id="ablation1d" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/ours_vs_3dgs.mp4" onplay="resizeAndPlay(this)"></video>
+            <canvas class="videoMerge" id="ablation1dMerge"></canvas>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container is-max-desktop" style="text-align:left; margin-top: 30px;">
@@ -460,25 +480,6 @@
     });
 
   </script>
-
-  <!-- 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Needs update
-          </p>
-         
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section> -->
 
   
 <section class="section" id="BibTeX">
