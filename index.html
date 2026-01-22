@@ -372,27 +372,50 @@
             <canvas class="videoMerge" id="ablation1cMerge"></canvas>
           </div>
         </div>
-        <div class="column">
+        <!-- <div class="column">
           <div class="content has-text-centered">
             <video class="video" width="100%" id="ablation1c" loop="" playsinline="" autoplay="" muted="" src="./static/images/3000frames/Popping_Artifact_removal/oct_down_ours_popping.mp" onplay="resizeAndPlay(this)"></video>
             <canvas class="videoMerge" id="ablation1cMerge"></canvas>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </section>
 
+<!-- 4-Video Comparison Section -->
+<section class="section">
+  <div class="hero-body" style="margin-top: -60px;">
+    <div class="container is-max-desktop" style="margin-top: 30px;">
+      <h3 class="title is-3 has-text-centered">Video Comparison</h3>
+      <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
+        Drag the sliders to compare different methods side by side.
+      </p>
+      <div id="video-comparison-container" class="video-dics" style="width: 100%;"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new VideoDics({
+      container: document.getElementById('video-comparison-container'),
+      videos: [
+        { src: './static/images/residence/octree_gs.mp4', label: 'Method 1' },
+        { src: './static/images/residence/octree_gs.mp4', label: 'Method 2' },
+        { src: './static/images/residence/octree_gs.mp4', label: 'Method 3' },
+        { src: './static/images/residence/octree_gs.mp4', label: 'Ours' }
+      ]
+    });
+  });
+</script>
+
   <section class="section">
     <div class="container ">
       <div class=" has-text-centered">
-        <h2 class="title is-3">Transparency Artifacts removal</h2>
+        <h2 class="title is-3">More </h2>
           <div class="container  is-max-desktop" style="text-align:left; margin-top: 30px;">
-            <h3 class="title is-4">Visualization at different LODs</h3>
-            <p style="font-size:18px; font-weight: 300;">
-              A clear division of roles is evident between different levels: LOD 0 captures most rough scene contents, and higher LODs gradually pick up the previously missed high-frequency details.
-              The following is a hierarchical visualization of the rendering results on various types of scenes.
-            </p>
+            <h3 class="title is-4">Comparsion with SOTA method</h3>
             <div class="content has-text-centered">
               <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
                   <li class="nav-item">
