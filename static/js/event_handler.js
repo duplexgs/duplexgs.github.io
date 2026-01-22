@@ -23,42 +23,42 @@ document.addEventListener('DOMContentLoaded', domReady);
                 let image = sections[i].getElementsByClassName('b-dics__image-container')[0].getElementsByClassName('b-dics__image')[0]
                 switch (idx) {
                     case 0:
-                        image.src = './static/images/levels/bicycle';
+                        image.src = './static/images/results/bicycle';
                         break;
                     case 1:
-                        image.src = './static/images/levels/counter';
+                        image.src = './static/images/results/counter';
                         break;
                     case 2:
-                        image.src = './static/images/levels/garden';
+                        image.src = './static/images/results/garden';
                         break;
                     case 3:
-                        image.src = './static/images/levels/stump';
+                        image.src = './static/images/results/room';
                         break;
                     case 4:
-                        image.src = './static/images/levels/room';
+                        image.src = './static/images/results/treehill';
                         break;
                     case 5:
-                        image.src = './static/images/levels/truck';
+                        image.src = './static/images/results/bonsai';
                         break;
                     case 6:
-                        image.src = './static/images/levels/Dr';
+                        image.src = './static/images/results/matrixcity';
                         break;
-                    case 7:
-                        image.src = './static/images/levels/Playroom';
-                        break;    
+                    // case 7:
+                    //     image.src = './static/images/results/Playroom';
+                    //     break;    
                 }
                 switch (i) {
                     case 0:
-                        image.src = image.src + '_LOD0.png';
+                        image.src = image.src + '_ours.png';
                         break;
                     case 1:
-                        image.src = image.src + '_LOD1.png';
+                        image.src = image.src + '_SFGS.png';
                         break;
                     case 2:
-                        image.src = image.src + '_LOD2.png';
+                        image.src = image.src + '_OctreeGS.png';
                         break;
                     case 3:
-                        image.src = image.src + '_LOD3.png';
+                        image.src = image.src + '_ScaffoldGS.png';
                         break;
 
                 }
