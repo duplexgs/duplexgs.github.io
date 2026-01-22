@@ -352,10 +352,9 @@
   <div class="hero-body" style="margin-top: -60px;">
     <div class="container is-max-desktop" style="margin-top: 30px;">
       <h3 class="title is-3 has-text-centered">Popping Artifacts removal</h3>
-      <!-- <p style="font-size:18px; font-weight: 300;">
-        Visualization of anchor Gaussians in different LODs (several levels are omitted for visual brevity), displaying both anchor points and splatted 2D Gaussians in each image.
-        Progressive training can guide the coarse-to-fine reconstruction process, avoid overlapping between different LOD levels. This strategy can not only reduce the number of rendered neural Gaussians, but improve the rendering accuracy of coarser LOD levels (e.g. LOD0, LOD1).
-      </p> -->
+      <p style="font-size:18px; font-weight: 300;">
+          Refresh the page if the videos are not synchronized.
+      </p>
       <!-- <br> -->
       <div class="columns is-centered">
         <!-- Left column - 2 videos -->
@@ -387,9 +386,11 @@
 <section class="section">
   <div class="hero-body" style="margin-top: -60px;">
     <div class="container is-max-desktop" style="margin-top: 30px;">
-      <h3 class="title is-3 has-text-centered">Video Comparison</h3>
+      <h3 class="title is-3 has-text-centered">Video Comparison 1</h3>
       <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
-        Drag the sliders to compare different methods side by side.
+        Drag the sliders to compare different methods side by side. 
+        Compare 3DGS [SIGGRAPH'23], Scaffold-GS [CVPR'24], Octree-GS [TPAMI'25] and our method.
+        <br><strong style="color: #e74c3c; background-color: #ffeaa7; padding: 2px 6px; border-radius: 3px;">⚠ Refresh the page if the videos are not synchronized.</strong>
       </p>
       <div id="video-comparison-container" class="video-dics" style="width: 100%;"></div>
     </div>
@@ -400,9 +401,10 @@
 <section class="section">
   <div class="hero-body" style="margin-top: -60px;">
     <div class="container is-max-desktop" style="margin-top: 30px;">
-      <h3 class="title is-3 has-text-centered">Additional Comparison</h3>
+      <h3 class="title is-3 has-text-centered">Video Comparison 2</h3>
       <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
-        Compare Sort-Free GS, Octree-GS, and our method.
+        Compare Sort-Free GS [ICLR'25], Octree-GS (Officially pretrained model) [TPAMI'25], and our method.
+        <br><strong style="color: #e74c3c; background-color: #ffeaa7; padding: 2px 6px; border-radius: 3px;">⚠ Refresh the page if the videos are not synchronized.</strong>
       </p>
       <div id="video-comparison-container-3" class="video-dics" style="width: 100%; margin: 0 auto;"></div>
     </div>
@@ -466,10 +468,10 @@
                   </li>
               </ul>
               <div class="b-dics" style="font-weight: 600;">
-                  <img src="./static/images/levels/bicycle_LOD0.png" alt="LOD0">
-                  <img src="./static/images/levels/bicycle_LOD1.png" alt="LOD1">
-                  <img src="./static/images/levels/bicycle_LOD2.png" alt="LOD2">
-                  <img src="./static/images/levels/bicycle_LOD3.png" alt="LOD3">
+                  <img src="./static/images/levels/bicycle_LOD0.png" alt="Sort-Free GS">
+                  <img src="./static/images/levels/bicycle_LOD1.png" alt="Scaffold-GS">
+                  <img src="./static/images/levels/bicycle_LOD2.png" alt="Octree-GS">
+                  <img src="./static/images/levels/bicycle_LOD3.png" alt="Ours">
               </div>
             </div>
           </div>
@@ -500,11 +502,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{fan2023lightgaussian,
-  author    = {Zhiwen Fan and Kevin Wang and Kairun Wen and Zehao Zhu and Dejia Xu and Zhangyang Wang},
-  title     = {LightGaussian: Unbounded 3D Gaussian Compression with 15x Reduction and 200+ FPS},
-  year      ={2023}, 
-  eprint    ={2311.17245}, 
+    <pre><code>@misc{liu2025duplexGS,
+  author    = {Weihang Liu and Yuke Li and Yuxuan Li and Jingyi Yu and Xin Lou},
+  title     = {{Duplex-GS: Proxy-Guided Weighted Blending for Real-Time Order-Independent Gaussian Splatting}},
+  year      ={2025}, 
+  eprint    ={2508.03180}, 
   archivePrefix={arXiv}, 
   primaryClass={cs.CV},
 }</code></pre>
