@@ -53,8 +53,8 @@ class BeforeAfter {
 }
 
 /**
- * VideoDics - A 4-video comparison slider with 3 dividers (Canvas-based)
- * Renders 4 videos on a single canvas with draggable dividers
+ * VideoDics - A multi-video comparison slider with dividers (Canvas-based)
+ * Renders N videos on a single canvas with N-1 draggable dividers
  */
 class VideoDics {
     constructor(options) {
@@ -63,7 +63,12 @@ class VideoDics {
         this.videos = [];
         this.canvas = null;
         this.ctx = null;
-        this.sliderPositions = [0.25, 0.5, 0.75]; // Normalized positions (0-1)
+        // Initialize slider positions evenly distributed based on number of videos
+        const numVideos = options.videos.length;
+        this.sliderPositions = [];
+        for (let i = 1; i < numVideos; i++) {
+            this.sliderPositions.push(i / numVideos);
+        }
         this.activeSlider = null;
         this.width = 0;
         this.height = 0;

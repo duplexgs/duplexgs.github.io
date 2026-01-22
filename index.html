@@ -396,6 +396,19 @@
   </div>
 </section>
 
+<!-- 3-Video Comparison Section -->
+<section class="section">
+  <div class="hero-body" style="margin-top: -60px;">
+    <div class="container is-max-desktop" style="margin-top: 30px;">
+      <h3 class="title is-3 has-text-centered">Additional Comparison</h3>
+      <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
+        Compare Sort-Free GS, Octree-GS, and our method.
+      </p>
+      <div id="video-comparison-container-3" class="video-dics" style="width: 100%;"></div>
+    </div>
+  </div>
+</section>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     new VideoDics({
@@ -404,6 +417,15 @@
         { src: './static/images/3000frames/10_20/3dgs.mp4', label: '3DGS' },
         { src: './static/images/3000frames/10_20/scaffoldgs.mp4', label: 'Scaffold-GS' },
         { src: './static/images/3000frames/10_20/oct.mp4', label: 'Octree-GS' },
+        { src: './static/images/3000frames/10_20/ours.mp4', label: 'Ours' }
+      ]
+    });
+    
+    new VideoDics({
+      container: document.getElementById('video-comparison-container-3'),
+      videos: [
+        { src: './static/images/3000frames/10_20/sort-free.mp4', label: 'Sort-Free GS' },
+        { src: './static/images/3000frames/10_20/oct_download.mp4', label: 'Octree-GS (Pretrained)' },
         { src: './static/images/3000frames/10_20/ours.mp4', label: 'Ours' }
       ]
     });
