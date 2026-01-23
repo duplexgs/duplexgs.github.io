@@ -1,18 +1,14 @@
 document.addEventListener('DOMContentLoaded', domReady);
 
         function domReady() {
-            new Dics({
-                container: document.querySelectorAll('.b-dics')[0],
-                hideTexts: false,
-                textPosition: "bottom"
-
-            });
-            new Dics({
-                container: document.querySelectorAll('.b-dics')[1],
-                hideTexts: false,
-                textPosition: "bottom"
-
-            });
+            var dicsElements = document.querySelectorAll('.b-dics');
+            for (var i = 0; i < dicsElements.length; i++) {
+                new Dics({
+                    container: dicsElements[i],
+                    hideTexts: false,
+                    textPosition: "bottom"
+                });
+            }
         }
 
         function objectSceneEvent(idx) {
@@ -40,9 +36,9 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 5:
                         image.src = './static/images/results/bonsai';
                         break;
-                    case 6:
-                        image.src = './static/images/results/matrixcity';
-                        break;
+                    // case 6:
+                    //     image.src = './static/images/results/matrixcity';
+                    //     break;
                 }
                 switch (i) {
                     case 0:
