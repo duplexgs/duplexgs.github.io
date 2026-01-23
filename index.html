@@ -437,9 +437,11 @@
   <section class="section">
     <div class="container ">
       <div class=" has-text-centered">
-        <h2 class="title is-3">Additional Qualitative Results</h2>
+        <h2 class="title is-3">Additional Qualitative Results-1</h2>
           <div class="container  is-max-desktop" style="text-align:left; margin-top: 30px;">
-            <!-- <h3 class="title is-4">Comparsion with SOTA method</h3> -->
+            <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
+              Comparisons from the Mip-NeRF360 dataset.
+            </p>
             <div class="content has-text-centered">
               <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon">
                   <li class="nav-item">
@@ -475,13 +477,14 @@
       </div>
     </div>
   </section>
+  
   <!-- Apartment Images Section (Portrait Resolution) -->
   <section class="section">
     <div class="container is-widescreen">
       <div class="has-text-centered">
-        <h2 class="title is-3">Apartment Scene Results</h2>
+        <h2 class="title is-3">Additional Qualitative Results-2</h2>
         <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
-          Portrait resolution comparisons from the Apartment dataset.
+          Comparisons from the VR-NeRF dataset.
         </p>
         <div class="container" style="margin-top: 30px; max-width: 900px;">
           <div class="content has-text-centered">
@@ -492,12 +495,50 @@
               <li class="nav-item">
                 <a class="nav-link" onclick="apartmentSceneEvent(1)">Apartment-2</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="apartmentSceneEvent(2)">Kitchen-2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="apartmentSceneEvent(3)">Kitchen-2</a>
+              </li>
             </ul>
             <div class="b-dics" id="apartment-dics" style="font-weight: 600; width: 100%; max-width: 740px; margin: 0 auto;">
               <img src="./static/images/results/apartment1_ours.png" alt="Ours">
               <img src="./static/images/results/apartment1_SFGS.png" alt="Sort-Free GS">
               <img src="./static/images/results/apartment1_OctreeGS.png" alt="Octree-GS">
               <img src="./static/images/results/apartment1_ScaffoldGS.png" alt="Scaffold-GS">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-widescreen">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Additional Qualitative Results-3</h2>
+        <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
+          Results on DrJohnson, Playroom and MatrixCity scenes.
+        </p>
+        <div class="container" style="margin-top: 30px; max-width: 1400px;">
+          <div class="content has-text-centered">
+            <ul class="nav nav-tabs nav-fill nav-justified" id="additional-scale-recon">
+              <li class="nav-item">
+                <a class="nav-link active" onclick="additionalSceneEvent(0)">DrJohnson</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="additionalSceneEvent(1)">Playroom</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="additionalSceneEvent(2)">MatrixCity</a>
+              </li>
+            </ul>
+            <div class="b-dics" id="additional-dics" style="font-weight: 600; width: 100%; max-width: 1200px; margin: 0 auto;">
+              <img src="./static/images/results/dj_ours.png" alt="Ours">
+              <img src="./static/images/results/dj_SFGS.png" alt="Sort-Free GS">
+              <img src="./static/images/results/dj_OctreeGS.png" alt="Octree-GS">
+              <img src="./static/images/results/dj_ScaffoldGS.png" alt="Scaffold-GS">
             </div>
           </div>
         </div>
