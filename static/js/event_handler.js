@@ -43,9 +43,12 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 6:
                         image.src = './static/images/results/matrixcity';
                         break;
-                    // case 7:
-                    //     image.src = './static/images/results/Playroom';
-                    //     break;    
+                    case 7:
+                        image.src = './static/images/results/apartment1';
+                        break;    
+                    case 7:
+                        image.src = './static/images/results/apartment2';
+                        break;    
                 }
                 switch (i) {
                     case 0:
