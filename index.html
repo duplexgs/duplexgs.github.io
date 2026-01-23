@@ -463,12 +463,6 @@
                   <li class="nav-item">
                     <a class="nav-link" onclick="objectSceneEvent(6)">MatrixCity</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" onclick="objectSceneEvent(7)">Apartment-1</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" onclick="objectSceneEvent(8)">Apartment-2</a>
-                  </li>
               </ul>
               <div class="b-dics" style="font-weight: 600;">
                   <img src="./static/images/results/bicycle_ours.png" alt="Ours">
@@ -481,7 +475,35 @@
       </div>
     </div>
   </section>
-
+  <!-- Apartment Images Section (Portrait Resolution) -->
+  <section class="section">
+    <div class="container is-widescreen">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Apartment Scene Results</h2>
+        <p class="has-text-centered" style="font-size:18px; font-weight: 300; margin-bottom: 20px;">
+          Portrait resolution comparisons from the Apartment dataset.
+        </p>
+        <div class="container" style="margin-top: 30px; max-width: 900px;">
+          <div class="content has-text-centered">
+            <ul class="nav nav-tabs nav-fill nav-justified" id="apartment-scale-recon">
+              <li class="nav-item">
+                <a class="nav-link active" onclick="apartmentSceneEvent(0)">Apartment-1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="apartmentSceneEvent(1)">Apartment-2</a>
+              </li>
+            </ul>
+            <div class="b-dics" id="apartment-dics" style="font-weight: 600; width: 100%; max-width: 740px; margin: 0 auto;">
+              <img src="./static/images/results/apartment1_ours.png" alt="Ours">
+              <img src="./static/images/results/apartment1_SFGS.png" alt="Sort-Free GS">
+              <img src="./static/images/results/apartment1_OctreeGS.png" alt="Octree-GS">
+              <img src="./static/images/results/apartment1_ScaffoldGS.png" alt="Scaffold-GS">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
