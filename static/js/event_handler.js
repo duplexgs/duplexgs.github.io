@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 7:
                         image.src = './static/images/results/apartment1';
                         break;    
-                    case 7:
+                    case 8:
                         image.src = './static/images/results/apartment2';
                         break;    
                 }
